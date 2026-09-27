@@ -90,7 +90,7 @@ python3 tools/familyos_flash/cli.py --help
 ```
 OpenFamilyOS/
 ├── kernel/       # Linux 原生内核之上的可加载模块、补丁、配置（GPL-2.0）
-├── services/     # 核心系统服务（C, POSIX，MIT）
+├── services/     # 核心系统服务（C, POSIX，MulanPSL-2.0）
 ├── fs/fosfs/     # 自研存储格式规范与参考实现
 ├── pkg/          # .fos 包格式与转包引擎（Python）
 ├── edu/          # 教育系统课程与编程路径

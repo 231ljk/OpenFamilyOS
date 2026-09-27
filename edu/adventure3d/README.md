@@ -41,6 +41,6 @@ report(result)              → 成绩回写 edu 进度库
 ## 目录
 
 - `scenes/` 场景 JSON
-- `engine.md`（本文件）接口约定
+- `README.md`（本文件）接口约定
 - 渲染后端示例实现欢迎 PR：建议从 `webgl`（复用平板浏览器）或
   `raylib`（最小说明）起步。

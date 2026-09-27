@@ -36,7 +36,7 @@
 | 字段 | 必选 | 说明 |
 | --- | --- | --- |
 | `id` | 是 | 整数，响应原样回带，便于并发对账 |
-| `cmd` | 是 | `域.动作`，点分命名，如 `session.open`、`models.chat` |
+| `cmd` | 是 | `域.动作`，点分命名，如 `session.open`、`device.heartbeat` |
 | `args` | 否 | 对象，命令参数 |
 
 ### 响应（服务端 → 客户端，单行）
@@ -69,7 +69,7 @@
 `session.open {kind,src,dst}` / `session.close {id}`
 
 ### ai-bus
-`models.list` / `model.load {path}` / `model.unload {name}`
+`models.list` / `model.load {path}`
 `chat {model?,messages:[{role,content}],max_tokens?}`（模型可替换：不传 model 用默认）
 
 ### home-bridge

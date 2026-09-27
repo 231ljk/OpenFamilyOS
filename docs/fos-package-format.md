@@ -1,7 +1,7 @@
 # `.fos` 原生包格式规范（v1）
 
 > FamilyOS 应用生态的原生分发单元。转包引擎（APK/deb/rpm → .fos）见
-> [`engine.md`](engine.md)。
+> [`../pkg/`](../pkg)。
 
 ## 1. 文件形态
 
@@ -44,7 +44,7 @@ hello.fos
     "fs_quota_mb": 128
   },
   "icon": "res/icon.png",
-    "upgrade_from": ["apk:com.example.hello"]
+  "upgrade_from": ["apk:com.example.hello"]
 }
 ```
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: MulanPSL-2.0
-# build/sync.sh — 主仓 → 子仓单向同步（对应 README 第六章「同步到其他仓库」）
+# build/sync.sh — 主仓 → 子仓单向同步（目录映射见下文 MAP）
 #
 # 用法：
 #   ./build/sync.sh all          # 同步所有子仓

@@ -31,9 +31,8 @@ edu/
 │   ├── 05-hardware/           # 硬件原理
 │   └── 06-osdev/              # 系统开发（用开轮版本身教学！）
 └── adventure3d/               # 3D 场景闯关实践模块
-    ├── README.md
-    ├── scenes/                # 场景定义（JSON）
-    └── engine.md              # 引擎接口约定
+    ├── README.md              # 引擎接口约定与场景格式
+    └── scenes/                # 场景定义（JSON）
 ```
 
 ## 四类课程（对齐开发文档第五章）
