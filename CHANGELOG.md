@@ -30,7 +30,7 @@
 
 ### Added
 - 开轮版首次开源发布（Open Wheel Edition）
-- 基于 Linux 内核二次开发的可替换模块框架
+- 基于 Linux 原生内核（不魔改基线）的可替换模块框架
 - 超级环 / AI 模型总线 / 智能家居桥接 / 语音助手 / 虚拟化兼容层 / 换机 / 健康使用 七个核心服务的参考实现
 
 [Unreleased]: https://github.com/231ljk/OpenFamilyOS/compare/v0.1.0...HEAD
