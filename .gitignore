@@ -9,7 +9,7 @@
 .tmp_versions/
 modules.order
 Module.symvers
-build/
+services/*/build/
 out/
 
 # ── Python ──────────────────────────────────
