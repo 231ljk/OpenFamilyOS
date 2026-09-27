@@ -39,3 +39,30 @@ jobs:
       - run: |
           KDIR=$(ls -d /usr/src/linux-headers-* | head -n1)
           make -C "$KDIR" M="$PWD/kernel" modules_install || true
+
+  # 全源码构建链：Linux 内核 + busybox + 服务 + rootfs + grub ISO
+  # 跑通即证明「源码 → 完整可启动操作系统」闭环成立
+  build-full-os:
+    name: 全源码构建完整 OS（源码→可启动 ISO）
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: 安装构建依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential wget bc flex bison libssl-dev \
+            cpio xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
+      - name: 从源码构建完整可启动系统
+        run: ./tools/build-full-os.sh --out out
+      - name: 校验产物
+        run: |
+          ls -lh out/*.iso out/initramfs.cpio.gz
+          file out/*.iso
+          test -s out/familyos-open-wheel-*-x86_64.iso
+      - name: 上传可启动镜像（验证用）
+        uses: actions/upload-artifact@v4
+        with:
+          name: familyos-full-os-iso
+          path: out/*.iso
+          retention-days: 14
