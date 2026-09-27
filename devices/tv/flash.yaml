@@ -1,0 +1,5 @@
+device: tv
+slots: _a/_b
+partition_table: partition-table.txt
+rescue_entry: USB 引导（安插入恢复键后上电，因机型而异）
+notes: 10 英尺体验；遥控=超级环 ctrl；儿童档经 health

@@ -1,0 +1,32 @@
+# 编辑器统一风格：内核代码用制表符（与 Linux 内核一致），用户态用 4 空格
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.c]
+indent_style = tab
+indent_size = 8
+
+[*.h]
+indent_style = tab
+indent_size = 8
+
+[KMakefile*]
+indent_style = tab
+indent_size = 8
+
+[Makefile]
+indent_style = tab
+indent_size = 8
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{md,json,yaml,yml}]
+indent_style = space
+indent_size = 2

@@ -1,0 +1,57 @@
+FamilyOS Open Wheel Edition — Licensing
+========================================
+
+本仓库采用「分区双许可」，与 Linux 生态的通行做法一致：
+
+1) kernel/ 目录（内核模块与补丁） —— GPL-2.0-only
+   内核代码与 Linux 内核的 GPL-2.0 许可证保持兼容。
+   SPDX 标识符：SPDX-License-Identifier: GPL-2.0
+   GPL-2.0 全文：https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+   （发布正式版本时请在 kernel/ 下附一份 GPL-2.0 全文副本）
+
+2) 其余全部目录（services/、fs/、pkg/、edu/、tools/、docs/、devices/ 等
+   用户态代码、脚本、文档与素材） —— MIT License
+   SPDX 标识符：SPDX-License-Identifier: MIT
+
+MIT License
+-----------
+
+Copyright (c) 2026 FamilyOS Lab / 231ljk
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+GPL-2.0 notice
+--------------
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+开源承诺
+--------
+
+开轮版（Open Wheel Edition）将始终作为免费、开放的社区版本存在，
+不会因商业化而改变其开源属性。你拿去用、拿去改、拿去做自己的东西——
+我们不管控，也不干涉。

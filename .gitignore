@@ -1,0 +1,46 @@
+# ── C 构建产物 ──────────────────────────────
+*.o
+*.ko
+*.obj
+*.mod
+*.mod.c
+*.symvers
+*.order
+.tmp_versions/
+modules.order
+Module.symvers
+build/
+out/
+
+# ── Python ──────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+venv/
+.venv/
+.pytest_cache/
+
+# ── 打包与镜像产物 ──────────────────────────
+*.fos
+*.fosimg
+dist/
+*.deb
+*.rpm
+*.apk
+
+# ── fosfs / 快照测试产物 ────────────────────
+*.fosvol
+*.snapshot
+
+# ── 编辑器与系统杂物 ────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── 本地覆盖 ────────────────────────────────
+*.local
+.env

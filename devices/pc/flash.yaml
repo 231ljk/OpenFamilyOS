@@ -1,0 +1,6 @@
+# familyos_flash devices 读取的本设备声明
+device: pc
+slots: _a/_b
+partition_table: partition-table.txt
+rescue_entry: USB 引导（开机按 F12 选 UEFI 设备）
+notes: x86_64 基线；翻译应用经 virt-compat window 模式并行

@@ -1,0 +1,5 @@
+device: tablet
+slots: _a/_b
+partition_table: partition-table.txt
+rescue_entry: 长按电源 10s 进 fastboot/UEFI 引导
+notes: arm64；教育子系统主设备，默认启用护眼档

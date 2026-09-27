@@ -1,0 +1,18 @@
+[Unit]
+Description=FamilyOS Migration - bidirectional device-to-device transfer
+Documentation=https://github.com/231ljk/OpenFamilyOS
+After=fos-super-ring-d.service
+
+[Service]
+Type=simple
+RuntimeDirectory=fos
+ExecStart=/usr/bin/fos-migration-d
+Restart=on-failure
+RestartSec=2
+# 迁移需要读写用户数据分区与接收端临时目录，故不开 ProtectHome
+ProtectSystem=full
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

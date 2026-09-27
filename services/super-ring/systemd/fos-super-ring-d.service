@@ -1,0 +1,20 @@
+[Unit]
+Description=FamilyOS Super Ring - global device coordination hub
+Documentation=https://github.com/231ljk/OpenFamilyOS
+After=network.target dbus.service
+
+[Service]
+Type=simple
+RuntimeDirectory=fos
+ExecStart=/usr/bin/fos-super-ring-d
+Restart=on-failure
+RestartSec=2
+# 最小权限：只需要自己的 socket 与内核注册表节点
+DeviceAllow=char-fos_ring rw
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

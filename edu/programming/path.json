@@ -1,0 +1,48 @@
+{
+  "format": 1,
+  "title": "编程进阶路径",
+  "desc": "基础操作 → 编程入门（图形化 → Python → C++）→ 硬件原理 → 系统开发",
+  "stages": [
+    {
+      "id": "01-basics",
+      "title": "基础操作",
+      "target_age": "6+",
+      "outcomes": ["文件与文件夹", "应用安装与卸载", "设置与隐私中心"]
+    },
+    {
+      "id": "02-blockly",
+      "title": "图形化编程",
+      "target_age": "8+",
+      "outcomes": ["顺序/循环/分支", "事件驱动", "做一个会动的小游戏"],
+      "uses": ["virt-compat"]
+    },
+    {
+      "id": "03-python",
+      "title": "Python 入门",
+      "target_age": "10+",
+      "outcomes": ["变量与数据结构", "函数", "用标准库写一个记账小工具"],
+      "sandbox": "health 面板默认只看时长不禁用"
+    },
+    {
+      "id": "04-cpp",
+      "title": "C++ 进阶",
+      "target_age": "12+",
+      "outcomes": ["指针与内存", "编译与链接", "给 services/common 修一个 Bug"]
+    },
+    {
+      "id": "05-hardware",
+      "title": "硬件原理",
+      "target_age": "12+",
+      "outcomes": ["GPIO 与传感器", "home-bridge 适配器实战"],
+      "uses": ["home-bridge", "super-ring"]
+    },
+    {
+      "id": "06-osdev",
+      "title": "系统开发",
+      "target_age": "14+",
+      "outcomes": ["读懂开轮版 IPC 骨架", "写一个新系统服务并提 PR"],
+      "uses": ["kernel", "services"],
+      "capstone": "从使用者变成创造者 —— 这就是开轮闭环"
+    }
+  ]
+}

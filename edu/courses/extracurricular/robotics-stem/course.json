@@ -1,0 +1,14 @@
+{
+  "id": "ext.robotics-stem",
+  "title": "STEM 机器人入门",
+  "category": "extracurricular",
+  "grade": "小学三~六年级",
+  "lang": "zh-CN",
+  "devices": ["tablet", "pc"],
+  "lessons": [
+    { "id": "01", "title": "机器人由哪几部分组成", "file": "lessons/01-anatomy.md", "minutes": 20 }
+  ],
+  "hardware": "edu/programming/05-hardware/",
+  "license": "CC-BY-NC-4.0",
+  "maintainer": "community"
+}

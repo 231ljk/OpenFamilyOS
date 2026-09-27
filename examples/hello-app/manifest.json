@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "id": "com.example.hello",
+  "name": "Hello",
+  "version_code": 1,
+  "version_name": "0.1.0",
+  "min_os": "0.1.0",
+  "arch": ["arm64", "x86_64"],
+  "entry": {
+    "type": "binary",
+    "path": "bin/{arch}/hello"
+  },
+  "permissions": [],
+  "sandbox": {
+    "mode": "strict",
+    "fs_quota_mb": 32
+  },
+  "icon": "res/icon.txt",
+  "upgrade_from": []
+}

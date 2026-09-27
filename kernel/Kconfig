@@ -1,0 +1,31 @@
+# FamilyOS 内核配置片段
+#
+# 编入内核源码树时：在 drivers/familyos/Kconfig 中
+#   source "drivers/familyos/Kconfig"
+# 仅作为外部模块（M= 方式）构建时无需使用本文件。
+
+menu "FamilyOS (Open Wheel Edition)"
+
+config FAMILYOS_SUPER_RING
+	tristate "FamilyOS Super Ring device registry"
+	depends on EXPERIMENTAL
+	help
+	  超级环：全局设备协同入口的内核侧设备注册表。
+	  在线设备、投屏/互传/剪贴板同步/网络共享会话在此登记，
+	  非本生态的蓝牙外设（耳机、音箱等）同样可以接入。
+	  编译为模块将在 /dev/fos_ring 提供 ioctl 接口。
+
+	  如不确定，选 N；移除本模块不影响内核其余部分启动。
+
+config FAMILYOS_HEALTH_USAGE
+	tristate "FamilyOS health usage counters"
+	depends on EXPERIMENTAL
+	help
+	  健康使用设备：按应用（uid + comm）累计前台使用时长，
+	  并维护家长侧的应用禁用名单。拦截动作由用户态守护进程
+	  依据本名单执行，内核只提供权威记录。
+	  编译为模块将在 /dev/fos_health 提供 ioctl 接口。
+
+	  如不确定，选 N。
+
+endmenu

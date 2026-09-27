@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "id": "fraction-hall",
+  "title": "分数大厅",
+  "course": "school.math-grade4-01/01",
+  "world": { "kind": "hall", "skybox": "assets/sky-blue.png" },
+  "objects": [
+    { "id": "ped-1-2", "mesh": "assets/pedestal.gltf", "pos": [-2, 0, -3], "accepts": ["1/2"] },
+    { "id": "ped-3-4", "mesh": "assets/pedestal.gltf", "pos": [0, 0, -3],  "accepts": ["3/4"] },
+    { "id": "ped-2-3", "mesh": "assets/pedestal.gltf", "pos": [2, 0, -3],  "accepts": ["2/3"] },
+    { "id": "blk-1", "mesh": "assets/fraction-block.gltf", "spawn": [0, 4, 2], "label": "3/4" },
+    { "id": "blk-2", "mesh": "assets/fraction-block.gltf", "spawn": [1, 5, 2], "label": "1/2" },
+    { "id": "blk-3", "mesh": "assets/fraction-block.gltf", "spawn": [-1, 4, 2], "label": "2/3" }
+  ],
+  "rules": {
+    "goal": "把掉落的分数块放到写有相同分数的基座上",
+    "time_limit_s": 180,
+    "win": "all_placed",
+    "reward_stars": 3
+  },
+  "teach": {
+    "before": "assets/intro-fraction.webm",
+    "on_wrong": "voice: 分母表示平均分的份数，再数一数这个基座分了几份？"
+  }
+}

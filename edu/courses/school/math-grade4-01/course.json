@@ -1,0 +1,15 @@
+{
+  "id": "school.math-grade4-01",
+  "title": "四年级数学 · 认识分数",
+  "category": "school",
+  "grade": "小学四年级",
+  "lang": "zh-CN",
+  "devices": ["tablet", "pc", "tv"],
+  "lessons": [
+    { "id": "01", "title": "什么是分数", "file": "lessons/01-what-is-fraction.md", "minutes": 15 },
+    { "id": "02", "title": "分数的比较", "file": "lessons/02-compare.md", "minutes": 18 }
+  ],
+  "adventure": { "scene": "adventure3d/scenes/fraction-hall.json" },
+  "license": "CC-BY-4.0",
+  "maintainer": "familyos-edu"
+}

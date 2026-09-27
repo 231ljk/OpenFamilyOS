@@ -1,0 +1,20 @@
+[Unit]
+Description=FamilyOS Unified Model Bus - local-only AI inference gateway
+Documentation=https://github.com/231ljk/OpenFamilyOS
+
+[Service]
+Type=simple
+RuntimeDirectory=fos
+Environment=FOS_MODEL_DIR=/usr/lib/fos/models
+ExecStart=/usr/bin/fos-ai-bus-d
+Restart=on-failure
+RestartSec=2
+# 开轮版硬约束：模型总线不需要任何网络。
+# 如需更强隔离，取消下一行注释（模型插件若有联网行为会直接失败——这正是我们希望的）
+# PrivateNetwork=yes
+ProtectHome=read-only
+ProtectSystem=strict
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

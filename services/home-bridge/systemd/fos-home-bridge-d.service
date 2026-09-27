@@ -1,0 +1,21 @@
+[Unit]
+Description=FamilyOS Home Bridge - smart home protocol bridging hub
+Documentation=https://github.com/231ljk/OpenFamilyOS
+After=network-online.target fos-super-ring-d.service
+
+[Service]
+Type=simple
+RuntimeDirectory=fos
+Environment=FOS_ADAPTER_DIR=/usr/lib/fos/home-adapters
+ExecStart=/usr/bin/fos-home-bridge-d
+Restart=on-failure
+RestartSec=2
+# 桥接需要局域网发现（mDNS/SSDP）与厂商云通道，但不需要任意出网：
+# 生产部署可配合防火墙 profile 只放行已认证适配器进程
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

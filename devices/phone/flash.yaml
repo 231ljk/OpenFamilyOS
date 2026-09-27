@@ -1,0 +1,5 @@
+device: phone
+slots: _a/_b
+partition_table: partition-table.txt
+rescue_entry: 音量下+电源进 fastboot/dre 模式
+notes: 实验中——仅 mainline 支持机型可完整构建

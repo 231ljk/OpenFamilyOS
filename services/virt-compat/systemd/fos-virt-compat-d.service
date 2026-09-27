@@ -1,0 +1,16 @@
+[Unit]
+Description=FamilyOS Virtualization Compat Layer - cross-arch app runner
+Documentation=https://github.com/231ljk/OpenFamilyOS
+
+[Service]
+Type=simple
+RuntimeDirectory=fos
+# 翻译后端选择（box64 / fex / qemu），留空=自动
+Environment=FOS_TRANSLATOR=
+ExecStart=/usr/bin/fos-virt-compat-d
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

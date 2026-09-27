@@ -1,0 +1,18 @@
+{
+  "id": "vendor.example-dev",
+  "title": "示例厂商 · 应用开发第一课",
+  "category": "vendor",
+  "grade": "任意",
+  "lang": "zh-CN",
+  "devices": ["pc"],
+  "lessons": [
+    { "id": "01", "title": "打出你的第一个 .fos", "file": "lessons/01-first-fos.md", "minutes": 30 }
+  ],
+  "vendor": {
+    "name": "示例厂商",
+    "homepage": "https://example.com",
+    "note": "厂商按本 schema 提供课程包，仓库只做目录与分发，内容责任归厂商"
+  },
+  "license": "厂商自定（样例为 CC-BY-4.0）",
+  "maintainer": "vendor"
+}

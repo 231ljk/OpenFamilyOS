@@ -1,0 +1,21 @@
+[Unit]
+Description=FamilyOS Health Usage - parental controls and screen time
+Documentation=https://github.com/231ljk/OpenFamilyOS
+After=fos-super-ring-d.service
+
+[Service]
+Type=simple
+RuntimeDirectory=fos
+StateDirectory=fos
+ExecStart=/usr/bin/fos-health-d
+Restart=on-failure
+RestartSec=2
+# 需要读写内核计数器节点与状态目录
+DeviceAllow=char-fos_health rw
+ProtectHome=read-only
+ProtectSystem=strict
+ReadWritePaths=/var/lib/fos
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+device: watch
+slots: single
+partition_table: partition-table.txt
+rescue_entry: USB 直刷（无 bootloader 锁）
+notes: 概念验证——提醒端与采集端，超级环代理形态

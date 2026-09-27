@@ -1,0 +1,16 @@
+{
+  "id": "featured.ai-zero-to-model",
+  "title": "AI 零基础搭建：从感知到训练",
+  "category": "featured",
+  "grade": "初中及以上",
+  "lang": "zh-CN",
+  "devices": ["pc", "tablet"],
+  "lessons": [
+    { "id": "01", "title": "机器怎么「看见」图片", "file": "lessons/01-perception.md", "minutes": 25 },
+    { "id": "02", "title": "在本地训练一个分类器", "file": "lessons/02-train-local.md", "minutes": 40 }
+  ],
+  "uses": ["ai-bus"],
+  "note": "全程使用开轮版本地模型总线，不上传数据、不烧 Token",
+  "license": "CC-BY-4.0",
+  "maintainer": "familyos-edu"
+}

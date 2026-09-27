@@ -1,0 +1,18 @@
+[Unit]
+Description=FamilyOS Voice Assistant - cross-device voice control
+Documentation=https://github.com/231ljk/OpenFamilyOS
+After=fos-ai-bus-d.service fos-super-ring-d.service fos-home-bridge-d.service
+
+[Service]
+Type=simple
+RuntimeDirectory=fos
+ExecStart=/usr/bin/fos-voice-d
+Restart=on-failure
+RestartSec=2
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

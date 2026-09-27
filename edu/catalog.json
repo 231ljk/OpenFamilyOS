@@ -1,0 +1,28 @@
+{
+  "format": 1,
+  "updated": "2026-09-27",
+  "categories": {
+    "school": {
+      "title": "学校课程",
+      "desc": "覆盖常规学校教授的学科内容",
+      "courses": ["math-grade4-01", "chinese-grade4-01", "english-grade4-01"]
+    },
+    "extracurricular": {
+      "title": "校外课程",
+      "desc": "培训班、兴趣班等拓展内容",
+      "courses": ["robotics-stem"]
+    },
+    "featured": {
+      "title": "特色课程",
+      "desc": "AI 训练、AI 零基础搭建、3D 建模等前沿方向",
+      "courses": ["ai-zero-to-model", "threed-modeling-basics"]
+    },
+    "vendor": {
+      "title": "厂商课程",
+      "desc": "各大厂商提供的开发者课程",
+      "courses": ["example-dev"]
+    }
+  },
+  "paths": { "programming": "programming/path.json" },
+  "adventure": "adventure3d/README.md"
+}

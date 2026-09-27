@@ -1,0 +1,12 @@
+#!/bin/sh
+# Hello 示例应用入口（arm64）—— 纯 shell 演示，打包/沙箱/健康使用全链路可用。
+# 真应用请换成 ELF 二进制（examples/README.md 附 hello.c 参考）。
+echo "Hello from .fos! (FamilyOS 开轮版示例应用)"
+echo "arch: $(uname -m 2>/dev/null || echo unknown)  uid: $(id -u)"
+i=1
+while [ "$i" -le 3 ]; do
+    echo "tick $i/3"
+    sleep 1
+    i=$((i + 1))
+done
+exit 0
