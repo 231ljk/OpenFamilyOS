@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: MIT */
+/* SPDX-License-Identifier: MulanPSL-2.0 */
 /*
  * ai_plugin.h — 统一模型总线接口规范（模型侧 ABI）
  *

@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: MIT */
+/* SPDX-License-Identifier: MulanPSL-2.0 */
 /*
  * fosfs_spec.h — fosfs 磁盘格式字节布局契约（与 SPEC.md 同步维护）
  *

@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * model_default.c — 默认搭载模型：本地规则模型（参考实现）
  *

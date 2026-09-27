@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * fos_json.c — 见 fos_json.h 设计说明。
  * 解析采用「记录原文偏移」策略，取值时再解转义；构造采用固定缓冲

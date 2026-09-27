@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * fos-home-bridge-d — 智能家居桥接层（参考实现）
  *

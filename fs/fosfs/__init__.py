@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """FamilyOS fosfs 自研存储格式 —— Python 参考实现包。"""
 
 from .fosfs import (CH_HDR_SIZE, COMP_RAW, COMP_ZLIB, CorruptError,

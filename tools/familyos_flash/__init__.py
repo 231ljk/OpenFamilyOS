@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """FamilyOS 统一刷机与维护工具。
 
 覆盖开发文档第八章的四项能力：

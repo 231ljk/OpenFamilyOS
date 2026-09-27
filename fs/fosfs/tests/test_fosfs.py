@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """fosfs 参考实现测试：往返/压缩/快照/回滚/损坏检测/compact/TLV。"""
 
 import os

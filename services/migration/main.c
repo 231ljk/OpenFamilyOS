@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * fos-migration-d — 换机方案（双向迁移，参考实现）
  *

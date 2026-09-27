@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """系统镜像（.fosimg）格式与流式写入辅助。
 
 镜像头 4096 字节（对齐常见擦除粒度），小端：

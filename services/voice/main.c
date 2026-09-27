@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * fos-voice-d — 跨端语音助手（参考实现）
  *

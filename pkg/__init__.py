@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """FamilyOS .fos 包工具链：打包 / 检视 / 校验 / 转包。
 
 零第三方依赖（zipfile/tarfile/hashlib/json 走标准库）。

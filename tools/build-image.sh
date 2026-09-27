@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 # build-image.sh — FamilyOS 开轮版系统镜像构建（参考流程）
 #
 # 产出：<out>/familyos-open-wheel-<device>.fosimg

@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * fos-super-ring-d — 超级环：全局设备协同入口（参考实现）
  *

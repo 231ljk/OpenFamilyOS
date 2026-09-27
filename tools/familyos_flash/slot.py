@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """A/B 环境切换（slot）。
 
 真实系统里这是 bootloader 的事；本参考实现支持两种后端：

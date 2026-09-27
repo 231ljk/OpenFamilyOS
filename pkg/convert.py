@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """转包引擎：APK / deb / rpm → .fos。
 
 策略（对应开发文档「主流应用官方适配优先，小厂通过转包引擎兼容，

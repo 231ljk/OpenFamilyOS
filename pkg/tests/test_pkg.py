@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """.fos 打包 / 检视 / 校验 / 转包测试。
 
 测试内现场合成 apk（zip）与 deb（ar+tar），不依赖任何外部样本文件。

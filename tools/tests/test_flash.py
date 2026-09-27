@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """familyos_flash 测试：镜像格式 / 目标守卫 / A/B 槽 / 备份恢复 / CLI。
 
 全部在临时目录内用「目录槽位」与「镜像文件」模拟设备，

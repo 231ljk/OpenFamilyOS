@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """`python3 -m pkg` —— .fos 包工具链 CLI。
 
     python3 -m pkg build   <src_dir>  -o hello.fos

@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """manifest.json 的 schema 校验与读取（对应 docs/fos-package-format.md §2）。"""
 
 from __future__ import annotations

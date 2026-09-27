@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * fos-health-d — 健康使用设备（家长管理，参考实现）
  *
@@ -304,7 +304,7 @@ static int cmd_block_clear(const fos_jobj *req, fos_jbuf *b,
 		struct kh_block kb;
 
 		memset(&kb, 0, sizeof(kb));
-		kb.app_key = (uint32_t)fnv32(pkg);
+		/* app_key=0：内核按 id 哈希（与计数器/BLOCK 同一规则） */
 		kb.uid = uid;
 		snprintf(kb.id, sizeof(kb.id), "%s", pkg);
 		ioctl(kernel_fd, H_UNBLOCK, &kb);

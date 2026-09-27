@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: MIT */
+/* SPDX-License-Identifier: MulanPSL-2.0 */
 /*
  * fos_json.h — FamilyOS 极简 JSON 库（解析 + 构造）
  *

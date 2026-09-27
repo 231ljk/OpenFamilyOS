@@ -5,7 +5,7 @@
 
 **仓库**：<https://github.com/231ljk/OpenFamilyOS>
 **状态**：Active development, community driven
-**许可**：内核相关 GPL-2.0，用户态与工具 MIT（见 [LICENSE](LICENSE)）
+**许可**：内核相关 GPL-2.0，用户态与工具 MulanPSL-2.0（见 [LICENSE](LICENSE)）
 
 ---
 

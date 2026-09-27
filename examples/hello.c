@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: MIT */
+/* SPDX-License-Identifier: MulanPSL-2.0 */
 /*
  * hello.c — 示例应用的原生入口（供想编译真二进制的社区/学生替换 shell 版）
  *

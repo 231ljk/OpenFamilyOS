@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """写入目标抽象：真实块设备 / 回环镜像文件 / 目录槽位模拟。
 
 安全红线（本工具存在的全部意义之一）：

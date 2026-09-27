@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MulanPSL-2.0
 /*
  * fos_ipc.c — 守护进程公共骨架实现（协议见 docs/ipc-protocol.md）。
  *

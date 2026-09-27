@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """fosfs.py — FamilyOS 自研存储格式的 Python 参考实现。
 
 与 SPEC.md / fosfs_spec.h 逐字节一致。零第三方依赖（zlib/sha256 走标准库）。

@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """.fos 包检视（inspect）与完整性校验（verify）。
 
 verify 检查项：

@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: MIT */
+/* SPDX-License-Identifier: MulanPSL-2.0 */
 /*
  * fos_daemon.h — 守护进程通用 main 样板（header-only）
  *

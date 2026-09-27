@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """分区备份 / 恢复。
 
 备份格式（目录形态，可读、可选件、适配超级环互传）：

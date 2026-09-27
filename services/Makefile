@@ -11,7 +11,7 @@ CFLAGS  ?= -O2 -g -Wall -Wextra -Wno-unused-parameter -std=gnu11 -D_GNU_SOURCE
 LDFLAGS ?=
 LDLIBS  += -lpthread -ldl
 
-SERVICES := super-ring ai-bus home-bridge voice virt-compat migration health health
+SERVICES := super-ring ai-bus home-bridge voice virt-compat migration health
 SBINDIR  ?= /usr/bin
 UNITDIR  ?= /usr/lib/systemd/system
 

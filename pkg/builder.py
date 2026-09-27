@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """把「源目录 + manifest.json」构建为 .fos 包。
 
 构建规则（对应 docs/fos-package-format.md）：

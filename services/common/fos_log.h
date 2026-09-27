@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: MIT */
+/* SPDX-License-Identifier: MulanPSL-2.0 */
 /*
  * fos_log.h — 守护进程统一日志（header-only，stderr + 可选文件）
  * 约定：systemd 服务一律输出 stderr，由 journald 收集；

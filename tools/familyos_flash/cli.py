@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MulanPSL-2.0
 """familyos_flash —— 统一刷机与维护工具 CLI（开发文档第八章）。
 
     flash   系统镜像写入          python3 -m familyos_flash flash sys.img --to /dev/sdX

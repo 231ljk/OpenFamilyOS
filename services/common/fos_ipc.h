@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: MIT */
+/* SPDX-License-Identifier: MulanPSL-2.0 */
 /*
  * fos_ipc.h — FamilyOS 守护进程公共骨架（协议见 docs/ipc-protocol.md）
  *

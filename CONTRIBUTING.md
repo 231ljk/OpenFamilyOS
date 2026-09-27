@@ -28,7 +28,7 @@ make all && make test
 - 注释语言：代码内注释以中文为主，接口/协议文档中英对照。
 - 头文件一律加 `#ifndef` 卫士与 SPDX 标识符：
   - `kernel/**` → `SPDX-License-Identifier: GPL-2.0`
-  - 其余 → `SPDX-License-Identifier: MIT`
+  - 其余 → `SPDX-License-Identifier: MulanPSL-2.0`
 
 ### Python（pkg/、tools/、fs/）
 
