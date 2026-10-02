@@ -114,7 +114,7 @@ sed -i 's|^# CONFIG_STATIC is not set|CONFIG_STATIC=y|' .config
 make ARCH=$ARCH -j"$JOBS" >/dev/null
 mkdir -p "$RFS/bin"
 cp busybox "$RFS/bin/"
-cd "$RFS/bin"; for a in sh mount umount cat ls mkdir insmod modprobe dmesg setsid cttyhack; do ln -sf busybox "$a"; done
+cd "$RFS/bin" && ./busybox --install -s
 
 # ---------- 4. 编译 FamilyOS 服务与模型 ----------
 say "[4/6] 编译 services/（7 个守护进程 + 默认模型）"

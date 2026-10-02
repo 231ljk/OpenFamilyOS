@@ -79,6 +79,25 @@ make test-python                             # 全部单元测试
 
 脚本说明与依赖见 [`tools/build-image.sh`](tools/build-image.sh) 头部注释。
 
+### 5.1 从源码一键构建「完整可启动系统」（推荐）
+
+`tools/build-full-os.sh` 是**全源码构建链**：下载 Linux 6.6 LTS 与 busybox 源码，
+编译内核（含 `kernel/` 两个自研模块）、7 个守护进程与默认模型，组装
+initramfs/rootfs，最终用 grub 生成**可启动 ISO**（BIOS/UEFI）：
+
+```bash
+# 依赖（Debian/Ubuntu）：
+sudo apt install -y build-essential wget bc flex bison libssl-dev \
+    cpio xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
+
+make full-os                      # 等价于 ./tools/build-full-os.sh
+# 产出: out/familyos-open-wheel-<version>-x86_64.iso
+# 验证: qemu-system-x86_64 -cdrom out/familyos-open-wheel-*.iso -m 512M -boot d
+```
+
+构建链每次在 CI（`build-full-os` job）自动跑通，**源码 → 完整可启动系统**的
+闭环由 CI 持续验证；最新可启动镜像以 Actions artifact 形式提供。
+
 ## 6. 刷机与维护
 
 统一使用 [`tools/`](tools) 下的 `familyos_flash` 工具：
@@ -99,4 +118,5 @@ make test-python                             # 全部单元测试
 ## 8. CI
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) 在 ubuntu-latest 上执行：
-内核模块编译（modpost）→ C 服务编译与冒烟测试 → Python 全量测试。
+内核模块编译（modpost）→ C 服务编译与冒烟测试 → Python 全量测试 →
+**全源码构建完整可启动系统**（`build-full-os`，产出可启动 ISO 并上传 artifact）。
