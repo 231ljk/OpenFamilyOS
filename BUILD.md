@@ -87,8 +87,8 @@ initramfs/rootfs，最终用 grub 生成**可启动 ISO**（BIOS/UEFI）：
 
 ```bash
 # 依赖（Debian/Ubuntu）：
-sudo apt install -y build-essential wget bc flex bison libssl-dev \
-    cpio xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
+sudo apt install -y build-essential wget bc flex bison libssl-dev libelf-dev \
+    cpio xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin mtools systemd-dev
 
 make full-os                      # 等价于 ./tools/build-full-os.sh
 # 产出: out/familyos-open-wheel-<version>-x86_64.iso
