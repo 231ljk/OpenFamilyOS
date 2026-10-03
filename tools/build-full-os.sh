@@ -95,14 +95,15 @@ make ARCH=$ARCH olddefconfig >/dev/null
 make ARCH=$ARCH prepare >/dev/null
 make ARCH=$ARCH modules_prepare >/dev/null
 
+# 先完整编译内核镜像（生成 Module.symvers，out-of-tree 模块依赖它解析符号）
+say "    编译内核镜像"
+make ARCH=$ARCH -j"$JOBS" bzImage >/dev/null
+
 say "    编译 kernel/ 自研模块（out-of-tree，KDIR=$KS）"
 make ARCH=$ARCH -C "$TOP/kernel" KDIR="$KS" modules >/dev/null
 mkdir -p "$RFS/lib/modules"
 cp "$TOP/kernel/super_ring/super_ring.ko" \
    "$TOP/kernel/health_usage/health_usage.ko" "$RFS/lib/modules/"
-
-say "    编译内核镜像"
-make ARCH=$ARCH -j"$JOBS" bzImage >/dev/null
 
 # ---------- 3. 编译 busybox（静态） ----------
 say "[3/6] 下载并静态编译 busybox $BVER"
