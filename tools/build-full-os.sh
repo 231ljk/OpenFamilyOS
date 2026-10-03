@@ -13,7 +13,7 @@
 #
 # 依赖（Debian/Ubuntu）：
 #   apt install build-essential wget bc flex bison libssl-dev libelf-dev cpio \
-#               xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin systemd-dev
+#               xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin mtools systemd-dev
 # 用法：./tools/build-full-os.sh [--out DIR] [--arch x86_64]
 set -euo pipefail
 
@@ -192,7 +192,7 @@ menuentry "FamilyOS (Open Wheel Edition)" {
   initrd /boot/initramfs.gz
 }
 EOF
-grub-mkrescue -o "$ISO" "$WORK/iso" >/dev/null 2>&1
+grub-mkrescue -o "$ISO" "$WORK/iso"
 chmod 644 "$ISO"
 ls -lh "$ISO" "$OUT/initramfs.cpio.gz"
 echo
