@@ -80,9 +80,10 @@ make ARCH=$ARCH olddefconfig >/dev/null
 make ARCH=$ARCH prepare >/dev/null
 make ARCH=$ARCH modules_prepare >/dev/null
 
-# 先编译内建模块（显式生成 Module.symvers，out-of-tree 模块依赖它解析内核导出符号）
-say "    编译内建模块（生成 Module.symvers）"
-make ARCH=$ARCH -j"$JOBS" modules >/dev/null
+# make（all）= 先链接 vmlinux（生成 Module.symvers），再编译内建模块
+# out-of-tree 模块与 modpost 都依赖这份符号表
+say "    编译内核（vmlinux + 内建模块，生成 Module.symvers）"
+make ARCH=$ARCH -j"$JOBS" >/dev/null
 [ -s "$KS/Module.symvers" ] || die "内核符号表 Module.symvers 未生成"
 
 say "    编译内核镜像"
