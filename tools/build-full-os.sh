@@ -22,7 +22,7 @@ OUT="$TOP/out"
 ARCH="x86_64"
 JOBS="$(nproc 2>/dev/null || echo 2)"
 KERNEL_MAJOR="6.6"
-BUSYBOX_CHANNEL="1.36"
+BUSYBOX_CHANNEL="1.37"
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -101,7 +101,8 @@ wget -q "https://busybox.net/downloads/busybox-$BVER.tar.bz2" -O "$SRC/busybox.t
 tar -xf "$SRC/busybox.tar.bz2" -C "$SRC"
 cd "$SRC/busybox-$BVER"
 make ARCH=$ARCH defconfig >/dev/null
-sed -i 's|^# CONFIG_STATIC is not set|CONFIG_STATIC=y|' .config
+# 静态链接；禁用 tc（其 CBQ 代码与新版内核头文件不兼容）
+./scripts/config --enable STATIC --disable TC
 make ARCH=$ARCH -j"$JOBS" >/dev/null
 mkdir -p "$RFS/bin"
 cp busybox "$RFS/bin/"
