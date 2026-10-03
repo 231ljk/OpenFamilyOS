@@ -102,7 +102,8 @@ tar -xf "$SRC/busybox.tar.bz2" -C "$SRC"
 cd "$SRC/busybox-$BVER"
 make ARCH=$ARCH defconfig >/dev/null
 # 静态链接；禁用 tc（其 CBQ 代码与新版内核头文件不兼容）
-./scripts/config --enable STATIC --disable TC
+sed -i 's|^# CONFIG_STATIC is not set|CONFIG_STATIC=y|' .config
+sed -i 's|^CONFIG_TC=y|# CONFIG_TC is not set|' .config
 make ARCH=$ARCH -j"$JOBS" >/dev/null
 mkdir -p "$RFS/bin"
 cp busybox "$RFS/bin/"
