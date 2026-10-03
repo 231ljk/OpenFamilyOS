@@ -37,6 +37,12 @@ done
 
 [ "$ARCH" = "x86_64" ] || { echo "当前仅支持 --arch x86_64" >&2; exit 2; }
 
+# OUT 绝对化：脚本运行中会 cd 到源码/rootfs 临时目录，相对路径会失效
+case "$OUT" in
+  /*) : ;;
+  *) OUT="$TOP/$OUT" ;;
+esac
+
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
 SRC="$WORK/src"; RFS="$WORK/rootfs"
@@ -108,6 +114,7 @@ make ARCH=$ARCH -j"$JOBS" >/dev/null
 mkdir -p "$RFS/bin"
 cp busybox "$RFS/bin/"
 cd "$RFS/bin" && ./busybox --install -s
+cd "$TOP"
 
 # ---------- 4. 编译 FamilyOS 服务与模型 ----------
 say "[4/6] 编译 services/（7 个守护进程 + 默认模型）"
