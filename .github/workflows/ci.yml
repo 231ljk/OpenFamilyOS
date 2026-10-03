@@ -54,13 +54,29 @@ jobs:
           sudo apt-get install -y build-essential wget bc flex bison libssl-dev \
             cpio xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
       - name: 从源码构建完整可启动系统
-        run: ./tools/build-full-os.sh --out out
+        id: build
+        run: |
+          set -o pipefail
+          ./tools/build-full-os.sh --out out 2>&1 | tee /tmp/build.log
+        continue-on-error: true
+      - name: 上传诊断日志（无论成败）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-full-os-log
+          path: /tmp/build.log
+          retention-days: 7
+      - name: 构建失败则标记
+        if: steps.build.outcome == 'failure'
+        run: exit 1
       - name: 校验产物
+        if: success()
         run: |
           ls -lh out/*.iso out/initramfs.cpio.gz
           file out/*.iso
           test -s out/familyos-open-wheel-*-x86_64.iso
       - name: 上传可启动镜像（验证用）
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: familyos-full-os-iso
