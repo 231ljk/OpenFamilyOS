@@ -13,7 +13,7 @@
 #
 # 依赖（Debian/Ubuntu）：
 #   apt install build-essential wget bc flex bison libssl-dev libelf-dev cpio \
-#               xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
+#               xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin systemd-dev
 # 用法：./tools/build-full-os.sh [--out DIR] [--arch x86_64]
 set -euo pipefail
 
@@ -70,32 +70,21 @@ tar -xf "$SRC/kernel.tar.xz" -C "$SRC"
 KS="$SRC/linux-$KVER"; cd "$KS"
 make ARCH=$ARCH x86_64_defconfig >/dev/null
 # 最小可启动覆盖配置：initramfs / devtmpfs / 虚拟化驱动（QEMU 可跑）/ 9p
-cat >> .config <<'EOF'
-CONFIG_BLK_DEV_INITRD=y
-CONFIG_DEVTMPFS=y
-CONFIG_DEVTMPFS_MOUNT=y
-CONFIG_EXT4_FS=y
-CONFIG_VIRTIO=y
-CONFIG_VIRTIO_PCI=y
-CONFIG_VIRTIO_BLK=y
-CONFIG_VIRTIO_NET=y
-CONFIG_9P_FS=y
-CONFIG_9P_VIRTIO=y
-CONFIG_NET_9P=y
-CONFIG_TMPFS=y
-CONFIG_FW_LOADER=y
-CONFIG_PROC_FS=y
-CONFIG_SYSFS=y
-CONFIG_MODULES=y
-CONFIG_MODULE_UNLOAD=y
-CONFIG_SERIAL_8250=y
-CONFIG_SERIAL_8250_CONSOLE=y
-EOF
+./scripts/config \
+  --enable BLK_DEV_INITRD --enable DEVTMPFS --enable DEVTMPFS_MOUNT \
+  --enable EXT4_FS --enable VIRTIO --enable VIRTIO_PCI --enable VIRTIO_BLK \
+  --enable VIRTIO_NET --enable 9P_FS --enable NET_9P --enable TMPFS \
+  --enable FW_LOADER --enable PROC_FS --enable SYSFS --enable MODULES \
+  --enable MODULE_UNLOAD --enable SERIAL_8250 --enable SERIAL_8250_CONSOLE
 make ARCH=$ARCH olddefconfig >/dev/null
 make ARCH=$ARCH prepare >/dev/null
 make ARCH=$ARCH modules_prepare >/dev/null
 
-# 先完整编译内核镜像（生成 Module.symvers，out-of-tree 模块依赖它解析符号）
+# 先编译内建模块（显式生成 Module.symvers，out-of-tree 模块依赖它解析内核导出符号）
+say "    编译内建模块（生成 Module.symvers）"
+make ARCH=$ARCH -j"$JOBS" modules >/dev/null
+[ -s "$KS/Module.symvers" ] || die "内核符号表 Module.symvers 未生成"
+
 say "    编译内核镜像"
 make ARCH=$ARCH -j"$JOBS" bzImage >/dev/null
 
