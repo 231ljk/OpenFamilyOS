@@ -12,7 +12,7 @@
 # 产出：<out>/familyos-open-wheel-<version>-x86_64.iso
 #
 # 依赖（Debian/Ubuntu）：
-#   apt install build-essential wget bc flex bison libssl-dev cpio \
+#   apt install build-essential wget bc flex bison libssl-dev libelf-dev cpio \
 #               xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
 # 用法：./tools/build-full-os.sh [--out DIR] [--arch x86_64]
 set -euo pipefail

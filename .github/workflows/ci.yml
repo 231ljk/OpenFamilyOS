@@ -52,7 +52,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential wget bc flex bison libssl-dev \
-            cpio xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
+            libelf-dev cpio xorriso grub-pc-bin grub-efi-ia32-bin grub-efi-amd64-bin
       - name: 从源码构建完整可启动系统
         id: build
         run: |
