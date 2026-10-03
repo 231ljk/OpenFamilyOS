@@ -1,4 +1,4 @@
-# FamilyOS · 开轮版（Open Wheel Edition）
+# FamilyOS · 开源版（Open Wheel Edition）
 
 > An open-source, community-driven operating system base.
 > 一个面向全场景设备的开源操作系统底子。代码公开、注释清晰、功能克制、玩法自由。
@@ -15,7 +15,7 @@ FamilyOS 是一个面向**电脑、平板、手机、电视、手表**全场景�
 本仓库发布的是**开轮版（Open Wheel Edition）**：
 
 - 基于 **Linux 原生内核**（不 fork 源码树、不魔改基线），FamilyOS 的能力以可替换模块的形式叠加其上——是你自己的系统，不是某个发行版的套壳；
-- 「开轮」= 开放、开源、让系统的轮子转起来；
+- 「开源」= 开放、开源、让系统的轮子转起来；
 - 功能少、玩法少、代码清晰有注释，方便阅读和改造；
 - 不预设壁纸、不预设品牌，给你一个干净的底子；
 - 免费，不管控 —— 你拿去干什么我们都不过问。
